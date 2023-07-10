@@ -1,0 +1,36 @@
+{
+    "name": "disctils",
+    "description": "a utility package for discord.js",
+    "license": "MIT",
+    "type": "module",
+    "version": "1.0.0",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs",
+            "types": "./dist/index.d.ts"
+        },
+        "./client": {
+            "import": "./dist/client.js",
+            "require": "./dist/client.cjs",
+            "types": "./dist/client.d.ts"
+        },
+        "./package.json": "./package.json"
+    },
+    "scripts": {
+        "changeset": "changeset",
+        "lint": "tsc",
+        "build": "tsup src/*.ts --format cjs,esm --dts"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.26.2",
+        "consola": "^3.2.3",
+        "discord.js": "^14.11.0",
+        "tsup": "^7.1.0",
+        "typescript": "^5.1.6"
+    },
+    "peerDependencies": {
+        "consola": "^3.2.3",
+        "discord.js": "^14.11.0"
+    }
+}
